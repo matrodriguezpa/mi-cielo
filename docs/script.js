@@ -9,19 +9,19 @@ yesBtn.addEventListener("click", () => {
   gif.src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGI1cW5wMWhpaDF5b3pjdTF0OHZrcHJvaGkzOHJteDhmd245OGRnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Vuw9m5wXviFIQ/giphy.gif";
 });
 
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 // Make the No button move randomly on hover
 noBtn.addEventListener("mouseover", () => {
-  const wrapper = document.querySelector(".wrapper");
-  const wrapperRect = wrapper.getBoundingClientRect();
-  const noBtnRect = noBtn.getBoundingClientRect();
 
-  // Calculate max positions to ensure the button stays within the wrapper
-  const maxX = wrapperRect.width - noBtnRect.width;
-  const maxY = wrapperRect.height - noBtnRect.height;
+  // Generar posiciones aleatorias dentro de los límites
+    const randomX = Math.floor(getRandomNumber(0,75));
+    const randomY = Math.floor(getRandomNumber(-900,300));
 
-  const randomX = Math.floor(Math.random() * maxX);
-  const randomY = Math.floor(Math.random() * maxY);
-
-  noBtn.style.left = randomX + "px";
-  noBtn.style.top = randomY + "px";
+  // Asignar las nuevas posiciones
+  noBtn.style.left = randomX + "%";
+  noBtn.style.top = randomY + "%";
 });
+

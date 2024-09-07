@@ -10,13 +10,13 @@ body {
     align-items: center;
     min-height: 100vh;
     max-height: 120vh;
-    background: whitesmoke;
+    background: #ffb9b9;
 }
 
 .wrapper {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    height: 400px;
     text-align: center;
 }
 
@@ -26,11 +26,14 @@ h2 {
     margin: 15px 0;
 }
 
-.gif {
-    width: 100%;
-    max-width: 300px;
+.gif-container {
+    max-height: 200px;
 }
 
+.gif{
+    max-height: inherit;
+    border-radius: 15px;
+}
 .btn-group {
     display: flex;
     margin-top: 50px;
